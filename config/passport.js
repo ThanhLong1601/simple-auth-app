@@ -10,7 +10,7 @@ const customFields = {
 };
 
 const verifyCallback = (username, password, done) => {
-  User.findOne({ username, password })
+  User.findOne({ username })
     .then((user) => {
       if (!user) {
         return done(null, false);
